@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Create User</title>
+</head>
+
+<body class="bg-zinc-950 text-white">
+
+    <nav class="flex justify-between items-center p-6 border-b border-zinc-800">
+
+        <h1 class="text-2xl font-bold">
+            User Directory
+        </h1>
+
+        <a
+            href="/read"
+            class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl transition">
+
+            View Users
+
+        </a>
+
+    </nav>
+
+    <div class="min-h-[85vh] flex items-center justify-center p-5">
+
+        <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+
+            <h1 class="text-4xl font-bold text-center mb-2">
+                Create User
+            </h1>
+
+            <p class="text-zinc-400 text-center mb-8">
+                Add a new user to the database
+            </p>
+
+            <form action="/create" method="POST" class="space-y-4">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Name"
+                    required
+                    class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500">
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required
+                    class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500">
+
+                <input
+                    type="text"
+                    name="image"
+                    placeholder="Enter Image URL"
+                    class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-blue-500">
+
+                <button
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-semibold transition cursor-pointer">
+
+                    Create User
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
